@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+</head>
+<body>
+    <div>
+        <p>User Input: {{ user_input }}</p>
+
+        <!-- Display chatbot's response -->
+        <p>Chatbot Response: {{ bot_response['response'] }}</p>
+        
+        <!-- Display precautions and treatments -->
+        <p>Precautions: {{ ', '.join(bot_response.get('precautions', [])) }}</p>
+        <p>Treatments: {{ ', '.join(bot_response.get('treatments', [])) }}</p>
+    </div>
+</body>
+</html>
